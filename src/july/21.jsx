@@ -25,9 +25,7 @@ const Sourabh = () => {
    const abc=(e)=>{
     e.preventDefault();
 
-    if(!email){
-      setEmailError("Invalid email");
-    }
+ 
 
 
     console.log(name, email,password,gender,phone,city,bio,hobbies,date,profileimg)
