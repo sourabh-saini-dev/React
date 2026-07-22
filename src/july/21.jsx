@@ -12,29 +12,12 @@ const Sourabh = () => {
    const [date, setDate] = useState("");
    const [ profileimg, setProfileimg] = useState("");
 
-  //  const [error, setError] = useState("");
-
-
-
-  const [ emailError, setEmailError] = useState("");
-  const [ passwordError, setPasswordError] = useState("");
-
-   
-    
-
+  //  const [error, setError] = useState("")
    const abc=(e)=>{
     e.preventDefault();
-
- 
-
-
     console.log(name, email,password,gender,phone,city,bio,hobbies,date,profileimg)
    }
 
-
- 
-
-   
   return (
     <>
      <fieldset>
