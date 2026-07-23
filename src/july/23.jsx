@@ -2,17 +2,17 @@ import React, { useState } from "react";
 
 const B = () => {
   const [show, setShow] = useState(true);
-  const changeText = () => {
-    if (show === true) {
-      setShow(false);
-    } else {
-      setShow(true);
-    }
-  };
+      
+  const changeText= ()=>{
+    setShow(!show)
+     
+  }
 
   return (
     <>
-      <button onClick={changeText}>{show ? "hide" : "show"}</button>
+     <button onClick={changeText}>{show ? "show" : "hide"}</button>
+    
+      
     </>
   );
 };
