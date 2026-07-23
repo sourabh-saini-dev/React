@@ -19,4 +19,4 @@ const B = () => {
 
 export default B;
 
-  //  jab show button par click kare to hide or fir baad me show dikhaye uske liye with if else condition //
+  //  jab show button par click kare to hide or fir baad me show dikhaye uske liye with ternary operater //
