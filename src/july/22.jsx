@@ -1,57 +1,80 @@
 import React, { useState } from "react";
 
 const A = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [emailerror, setEmailError] = useState("")
-  const [ passworderror, setPasswordError] = useState("")
+  const [form, setForm] = useState({
+    email:"",
+    password:"",
+    phone:"",
+    gender:""
+  });
 
+  const [error,setError]=useState({})
 
+  const handleChange=(e)=>{
+    const { name,value } =e.target 
+    setForm({...form,
+        [name]:value
+    })
+  }
 
-  const abc=(e)=>{
+  const handleSubmit = (e) => {
     e.preventDefault();
-      
-    if(email ===""){
-        setEmailError("email not required")
-        return
+
+    let obj = {};
+
+    if (form.email == "") {
+      obj.email = "email is required";
     }
 
-    if(password === ""){
-        setPasswordError("password not required")
-   
-  }
-  setEmailError("")
-  setPasswordError("")
-  console.log(email,password);
-  
-}; 
-
+    if (form.password == "") {
+      obj.password = "password is required";
+    }
+    setError(obj)
+    localStorage.setItem("user",JSON.stringify(form))
+    if(Object.keys(obj).length === 0){
+        setForm({
+            email:"",
+            password:""
+        })
+    }
+  };
+  console.log(form)
+  let output = localStorage.getItem("user")
+  console.log(output)
   return (
     <>
       <fieldset>
-        <form onSubmit={abc}>
+        <form onSubmit={handleSubmit}>
           <label htmlFor="">
             Email:
             <input
               type="text"
-              placeholder="Enter your Email"onChange={(e) => setEmail(e.target.value)}
-                              
+              name="email"
+              value={form.email}
+              placeholder="Enter your Email"
+ onChange={handleChange}
             />
           </label>
-          <p style={{color: "red"}}>{emailerror}</p>
-          <br />  
+          <p style={{ color: "red",background:"white" }}>{error.email}</p>
           <br />
-         
+          <br />
 
           <label htmlFor="">
             Password:
-            <input type="text" placeholder="Enter your Password" onChange={(e)=> setPassword(e.target.value)} />
+            <input
+              type="text"
+              name="password"
+              value={form.password}
+              placeholder="Enter your Password"
+              onChange={handleChange}
+            />
           </label>
 
-          <p style={{color: "red"}}>{passworderror}</p>
-          <br /><br />
+          <p style={{ color: "red" }}>{error.password}</p>
+          <br />
+          <br />
 
-          <button>submit</button>
+          <button type="submit">submit</button>
         </form>
       </fieldset>
     </>

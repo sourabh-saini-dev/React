@@ -1,12 +1,14 @@
 import { useState } from "react";
 import "./App.css";
-import A from "./july/22";
+// import A from "./july/23";
+import B from "./july/23.jsx";
 
 // import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App(){
   return(
-   <A />
+  <B />
+   
   )
 }
 
