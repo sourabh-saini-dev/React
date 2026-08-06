@@ -11,7 +11,7 @@ const A = () => {
   const [error,setError]=useState({})
 
   const handleChange=(e)=>{
-    const { name,value } =e.target 
+    const { name,value } =e.target  
     setForm({...form,
         [name]:value
     })
@@ -39,8 +39,8 @@ const A = () => {
     }
   };
   console.log(form)
-  let output = localStorage.getItem("user")
-  console.log(output)
+  // let output = localStorage.getItem("user")
+  // console.log(output)
   return (
     <>
       <fieldset>

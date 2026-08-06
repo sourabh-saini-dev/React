@@ -41,7 +41,7 @@ const Sourabh = () => {
 
         <label htmlFor="">
           Password:
-          <input type="text" placeholder="Enter your password" id=""  onChange={(e)=> setPassword(e.target.value)} />
+          <input type="text" name="Password" placeholder="Enter your password" id="password"  onChange={(e)=> setPassword(e.target.value)} />
 
         </label>
         <br /><br />
