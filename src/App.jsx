@@ -1,18 +1,17 @@
-import { useState } from "react";
+import React from "react";
 import "./App.css";
-// import A from "./july/23";
-import Form from "./july/23.1.jsx";
 
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Form from  "./Form/Form.jsx"
+
+
 
 function App(){
   return(
  
  <>
-  <Form />
-  <h1>fkdfjkd</h1>
+<Form/>
  </>
-   
+    
   )
 }
 

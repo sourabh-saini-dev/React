@@ -9,6 +9,7 @@ const  Form = () => {
       state:"",
 
   });
+   
   const [error , setError] = useState({})
 
   const handleChange = (e)=>{
@@ -18,8 +19,10 @@ const  Form = () => {
 
 
     });
+     
 
   }
+ 
 
 
   const handleSubmit= (e)=>{
@@ -57,7 +60,7 @@ const  Form = () => {
       })
      }
   }
-  let ans = localStorage
+  
     console.log(form);
     
    
