@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-import Form from  "./Form/Form.jsx"
+import  Test from  "./Compo/8.jsx"
 
 
 
@@ -9,7 +9,7 @@ function App(){
   return(
  
  <>
-<Form/>
+<Test/>
  </>
     
   )
