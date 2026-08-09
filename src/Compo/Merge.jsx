@@ -74,3 +74,5 @@ const Merge = () => {
 }
 
 export default Merge
+
+    // 2 api merge karna data render karna  with show hide ke sath me //
