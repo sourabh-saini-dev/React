@@ -8,7 +8,7 @@ const Form1 = () => {
          state:"",
         })
 
-        const [ error, setError] = usestate(0)
+        const [ error, setError] = useState({})
 
       const handleChange=(e)=>{
       const {name,value} = e.target
@@ -23,12 +23,8 @@ const Form1 = () => {
          const Submit =(e)=>{
             e.preventDefault()  
 
-            console.log(form)
-
-
-         }
-
-         let obj ={}
+         
+ let obj ={}
 
 
          if(form.email === ""){
@@ -49,6 +45,16 @@ const Form1 = () => {
          }
 
           setError(obj)
+
+          if(Object.keys(obj).length===0){
+          localStorage.setItem("setForm", JSON.stringify(form))
+        
+          console.log(form)
+           }
+         }
+
+        
+         
       
 
   return (
@@ -56,13 +62,20 @@ const Form1 = () => {
         <fieldset>
             <form  onSubmit={Submit}>
                  <label htmlFor="">email</label>
-                 <input type="text" name="email" value={form.email} placeholder='enter your email' onChange={handleChange}
-                  />
+                 <input type="text" name="email" value={form.email} placeholder='enter your email' onChange={handleChange}  />
+                 <p style={{
+                  color: "red",
+                 }}>{error.email}</p>
+                 
+              
                  <br /><br />
 
 
                  <label htmlFor="">password</label>
                  <input type="text" name="password" value={form.password} placeholder='enter your password' id=""   onChange={handleChange} />
+                 <p style={{
+                  color: "red",
+                 }}>{error.password}</p>
                  <br /><br />
 
                  <label htmlFor="">gender</label>
@@ -70,6 +83,9 @@ const Form1 = () => {
 
 
                  <input type="radio" name="gender" value="female " onChange={handleChange} /> female
+                  <p style={{
+                     color: "red",
+                  }}>{error.gender}</p>
 
 
                  <br /><br />
@@ -80,14 +96,27 @@ const Form1 = () => {
                     <option value="rajasthan">rajasthan</option>
                     <option value="maharashtra">maharashtra</option>
                  </select>
+                 <p style={{
+                  color:"red",
+                 }}>{error.state}</p>
                  <br /><br />
                    
-                   <button type='submit'>submit</button>
+                   <button 
+                 type='submit'>submit</button>
             </form>
         </fieldset>
+        <br /><br />
+
+        <h1>{form.email}</h1>
+        <p>{form.gender}</p>
+        <p>{form.password}</p>
      
     </div>
   )
 }
 
 export default Form1
+
+
+
+// data ko render kia fir use localstorage me save kia hai //

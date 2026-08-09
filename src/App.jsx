@@ -1,17 +1,14 @@
 import React from "react";
 import "./App.css";
 
-import  Test from  "./Compo/8.jsx"
+import Form1 from "./Compo/Form1";
 
-
-
-function App(){
-  return(
- 
- <>
-<Test/>
- </>
+function App() {
+  return (
+    <>
+      <Form1 />
     
+    </>
   )
 }
 
