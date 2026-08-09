@@ -1,12 +1,12 @@
 import React from "react";
 import "./App.css";
 
-import Form1 from "./Compo/Form1";
+import Merge from "./Compo/Merge"
 
 function App() {
   return (
     <>
-      <Form1 />
+      <Merge/>
     
     </>
   )
