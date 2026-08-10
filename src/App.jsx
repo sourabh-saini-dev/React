@@ -1,12 +1,12 @@
 import React from "react";
 import "./App.css";
 
-import Merge from "./Compo/Merge"
+import Drop from "./Dropdown/Drop"
 
 function App() {
   return (
     <>
-      <Merge/>
+      <Drop/>
     
     </>
   )
