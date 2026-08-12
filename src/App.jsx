@@ -1,12 +1,12 @@
 import React from "react";
 import "./App.css";
 
-import Drop from "./Dropdown/Drop"
+import Test from "./Sort/Test"
 
 function App() {
   return (
     <>
-      <Drop/>
+      <Test/>
     
     </>
   )
